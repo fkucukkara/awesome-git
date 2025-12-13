@@ -84,25 +84,8 @@ echo "# My Project" > README.md
 git add README.md
 git commit -m "Initial commit"
 ```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before submitting a pull request.
-
 ---
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## ⭐ Show Your Support
-
-If you find this repository helpful, please give it a star! ⭐
-
----
-
-Made with ❤️ for the developer community
