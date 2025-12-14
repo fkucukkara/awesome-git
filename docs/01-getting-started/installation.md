@@ -108,7 +108,7 @@ brew upgrade git
 ```
 
 ### Linux
-Use your package manager's update command.
+Use your package manager's update command
 
 ---
 
