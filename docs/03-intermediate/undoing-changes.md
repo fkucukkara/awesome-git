@@ -115,6 +115,31 @@ git reset --hard abc1234       # Reset to specific commit
 git reset --hard origin/main   # Reset to remote state
 ```
 
+### Pushing After Reset
+
+⚠️ **Important**: If you've already pushed commits that you're resetting, you'll need to force push:
+
+```bash
+# After any reset that moves HEAD backward
+git push --force-with-lease
+
+# Alternative (less safe)
+git push --force
+```
+
+**When is force push needed?**
+- ✅ After `git reset --soft HEAD~1` (if commits were pushed)
+- ✅ After `git reset --mixed HEAD~1` (if commits were pushed)
+- ✅ After `git reset --hard HEAD~1` (if commits were pushed)
+- ❌ Not needed if commits were never pushed
+
+**Use `--force-with-lease` instead of `--force`**:
+- Safer option that checks if remote was updated
+- Prevents accidentally overwriting others' work
+- Only forces if remote is in the expected state
+
+⚠️ **Warning**: Never force push to shared branches (main, develop) without team agreement!
+
 ---
 
 ## ↩️ Git Revert
